@@ -16,6 +16,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications"
 function Header() {
   const dispatch = useDispatch();
 
+
 const logoutOfApp = () => {
   signOut(auth)
     .then(() => {
@@ -44,7 +45,7 @@ const logoutOfApp = () => {
             <HeaderOption Icon = {BusinessCenterIcon} title = "Jobs"/>
             <HeaderOption Icon = {ChatIcon} title = "Messaging"/>
             <HeaderOption Icon = {NotificationsIcon} title = "Notifications"/>
-            <HeaderOption avatar={BusinessCenterIcon} title = 'me' />
+            <HeaderOption avatar={true} title = 'me' onClick={logoutOfApp}/>
         </div> 
     </div>
   )
